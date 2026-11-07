@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깃허브 연동 테스트2</title>
+    <style>
+        /* 화면 중앙 정렬 및 배경색 설정 */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f6f9;
+            font-family: 'Malgun Gothic', sans-serif;
+        }
+        /* 내용을 담는 하얀색 박스 디자인 */
+        .box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        /* 버튼 디자인 */
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        /* 버튼에 마우스를 올렸을 때 색상 변화 */
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* 숫자 표시 글자 크기 */
+        #countDisplay {
+            font-size: 48px;
+            color: #ff4757;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>🎉 깃허브 업로드 테스트</h1>
+        <p>코드가 정상적으로 적용되었습니다.</p>
+        
+        <!-- 숫자가 바뀌는 부분 -->
+        <div id="countDisplay">0</div>
+        
+        <!-- 클릭 버튼 -->
+        <button onclick="increaseCount()">숫자 올리기</button>
+    </div>
+
+    <script>
+        // 숫자를 저장할 공간
+        let count = 0;
+
+        // 버튼을 누를 때마다 실행되는 기능
+        function increaseCount() {
+            count++; // 숫자를 1씩 증가
+            document.getElementById('countDisplay').innerText = count; // 화면에 변경된 숫자 표시
+        }
+    </script>
+
+
+
+
+</body>
+</html>
